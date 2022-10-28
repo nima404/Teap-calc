@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teap Calc</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <div>
+                <input type="number" id="price" placeholder="Enter The Price">
+            </div>
+
+            <div>
+                <h2>Discount</h2>
+                <div class="inputsParent">
+                    <input id="rangeInput" type="range" min="0" max="100" value="0"
+                        oninput="amount.value=rangeInput.value" class="inputRange" />
+                    <input id="amount" type="number" value="0" min="0" max="100" oninput="rangeInput.value=amount.value"
+                        class="numberInput" />
+                </div>
+            </div>
+
+            <div>
+                <h2>Tip</h2>
+                <div class="inputsParent">
+                    <input type="range" id="tipInput" min="0" max="100" value="0"
+                        oninput="tiprange.value = tipInput.value" class="inputRange" />
+                    <input type="number" id="tiprange" min="0" max="100" value="0"
+                        oninput="tipInput.value=tiprange.value" class="numberInput" />
+                </div>
+            </div>
+
+            <div>
+                <button id="btnClick">click</button>
+            </div>
+
+        </div>
+
+
+        <div class="responsParent">
+            <div id="priceDiv" class="respons"></div>
+            <div id="discountDiv" class="respons"></div>
+            <div id="tipDiv" class="respons"></div>
+            <div id="finalPriceDiv" class="respons"></div>
+        </div>
+
+    </section>
+
+    <script src="./assets/script/main.js"></script>
+</body>
+
+</html>
